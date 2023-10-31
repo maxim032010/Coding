@@ -1,45 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Login</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+    </style>
 </head>
 <body>
 
-    <div class="Benutzername">
-        <form action="">
-            <div class="input-box">
-                <input type="E-mai" placeholder="Benutzername"
-                required>
-                <i class="bx bxs-user"></i>
-
-                </div>
+    <div class="error-box" id="error-box" style="display: none;">
+        <div id="error-message" class="error-message">
+            <p>Falsche E-Mail oder Passwort. Bitte versuche es erneut.</p>
+        </div>
+    </div>
     
-                        <div class="input-box">
-                            <input type="Password" 
-                            placeholder="Password"required>
-                            <i class="bx bxs-user"></i>
-            
-                            </div>
-
-                            <div class="merken-vergessen">
-                                <label><input type="checkbox"> Anmededaten speichern
-                                    </label>
-                                    <a href="PS-Vergessen">Password Vergessen?</a>
-                            </div>
-
-
-                            <div align= "center"><button type="submit" class="Login-Knopf">Anmelden</button></div>
-
-                            <div class="Registrierungs-link">
-                                <p>Du hast noch keinen account <a href="Registrieren">Registrieren</a></p>
-                            </div>
-              </form>
-    </div>            
-
+    <div class="login-container">
+        <h1 class="login-heading">Anmelden</h1>
+        <form onsubmit="login(event);">
+            <input type="email" class="input-field" id="email" placeholder="Email">
+            <input type="password" class="input-field" id="password" placeholder="Passwort">
+            <label class="checkbox-label">
+                <input type="checkbox" id="showPassword" class="checkbox-input" onchange="togglePassword()"> Passwort anzeigen
+            </label>
+            <button type="submit" class="login-button">Anmelden</button>
+        </form>
+        <p class="register-link">Noch keinen Account? <br> <a href="Registrieren/Registrieren.html">Account erstellen</a></p>
+    </div>
+    
 </body>
 </html>
