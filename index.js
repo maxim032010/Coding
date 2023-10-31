@@ -29,7 +29,7 @@ function login(event) {
         // Setze die angemeldete E-Mail im Local Storage
         localStorage.setItem('angemeldeteEmail', emailValue);
 
-        window.location.href = 'Home/home.html';
+        window.location.href = 'home.html';
     } else {
         console.log('Zugriff abgelehnt');
         email.classList.remove('success-border');
